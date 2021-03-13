@@ -43,7 +43,7 @@ public class HookGUI {
                         inventory.setItem(inventory.getSize() - 1, createItem(Material.ARROW, 1, 0, "&aNext"));
                     }
 
-            player.sendMessage(chat("&d" + Arrays.toString(ItemNames.toArray())));
+            //player.sendMessage(chat("&d" + Arrays.toString(ItemNames.toArray())));
             for (int i = 0; i < 45; i++) {
                 if(i + (index * 45) >= ItemNames.size()) break;
                 String s = ItemNames.get(i + (index * 45));
@@ -76,7 +76,7 @@ public class HookGUI {
 
                 inventory.setItem(i, createItem(Material.FISHING_ROD, 1, 0, s, " &7Multiplier: &a" + multiplier, " &7Max Y Power: &a" + yPower, "&8Cooldown: &3" + config.getDouble("Grappling Hooks." + s + ".Cooldown") + "s"));
 
-                player.sendMessage(chat("&e" + i));
+                //player.sendMessage(chat("&e" + i));
             }
 
             Bukkit.getScheduler().runTask(plugin, () -> {
