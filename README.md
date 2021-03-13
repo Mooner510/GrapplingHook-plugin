@@ -17,6 +17,14 @@ Tested versions: **spigot 1.8.8, 1.16.2**
 ## How to plugin reload
 이 플러그인은, 리로드 할 필요 없이 `config.yml`파일을 수정하면 자동으로 로드됩니다.
 
+## Function
+ - 초보자들도 쉽게 수정하고 추가할 수 있습니다.
+ - 설정된 그래플링 훅을 쉽게 꺼낼 수 있습니다.
+ - 그래플링 훅을 사용하고 착지할 때 데미지를 받지 않습니다.
+ - 쉽게 그래플링 훅을 커스터 마이징 할 수 있습니다.
+ - 각 그래플링 훅 마다 쿨타임을 설정할 수 있습니다.
+ - 거의 모든 마인크래프트 버전에 호환됩니다.
+
 ## Commands
 ### `/grapplinghook`, `/gh`
 ![](https://cdn.discordapp.com/attachments/699227450705444884/820327515821965342/unknown.png)
