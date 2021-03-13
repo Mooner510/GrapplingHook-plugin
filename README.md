@@ -15,10 +15,10 @@ Tested versions: **spigot 1.8.8, 1.16.2**
 > - spigot (1.15.x) : 1.15, 1.15.1, 1.15.2
 > - spigot (1.16.x) : 1.16.1, **1.16.2**, 1.16.3, 1.16.4, 1.16.5
 
-## How to plugin reload
+## 리로드
 이 플러그인은, 리로드 할 필요 없이 `config.yml`파일을 수정하면 자동으로 로드됩니다.
 
-## Function
+## 기능
  - 초보자들도 쉽게 수정하고 추가할 수 있습니다.
  - 설정된 그래플링 훅을 쉽게 꺼낼 수 있습니다.
  - 그래플링 훅을 사용하고 착지할 때 데미지를 받지 않습니다.
@@ -26,7 +26,7 @@ Tested versions: **spigot 1.8.8, 1.16.2**
  - 각 그래플링 훅 마다 쿨타임을 설정할 수 있습니다.
  - 거의 모든 마인크래프트 버전에 호환됩니다.
 
-## Commands
+## 명령어
 ### `/grapplinghook`, `/gh`
 ![](https://cdn.discordapp.com/attachments/699227450705444884/820327515821965342/unknown.png)
 ![](https://cdn.discordapp.com/attachments/699227450705444884/820328172851298314/unknown.png)
@@ -85,12 +85,97 @@ Grappling Hooks:
 
  - 단위: 초
 
-## Downloads
+## 다운로드
 다운로드는, [Releases](https://github.com/Mooner510/GrapplingHook-plugin/releases)를 참고하세요.
 
-## Report bugs and feedback
+## 버그 제보 및 업데이트 요청
 **Discord - 무너#0510**
 
-## Join my Discord!
+## 디스코드
+#### Click to this image:
+[![](https://discordapp.com/assets/e4923594e694a21542a489471ecffa50.svg)](https://discord.gg/AbgV8Rz)
+
+***
+
+# `English Page` (I used translator)
+
+## Reload
+This plugin is automatically loaded by editing the config.yml file without having to reload it.
+
+## Functions
+ - Even beginners can easily edit and add.
+ - You can easily get the created grappling hook.
+ - Does not take damage when landing after used grappling hook.
+ - You can easily customize the grappling hook.
+ - You can set the cool time for each grappling hook.
+ - Compatible with almost all Minecraft versions.
+
+## Commands
+### `/grapplinghook`, `/gh`
+![](https://cdn.discordapp.com/attachments/699227450705444884/820327515821965342/unknown.png)
+![](https://cdn.discordapp.com/attachments/699227450705444884/820328172851298314/unknown.png)
+![](https://cdn.discordapp.com/attachments/699227450705444884/820330110179737600/unknown.png)
+
+This command checks all grappling hooks.
+
+To use this command, you need the `grapplinghook.command` and `grapplinghook.command.gh` permissions.
+
+If you click the fishing rod on the screen, you can receive the fishing rod as inventory.
+
+## How to Edit config.yml
+
+ - Syntax (config.yml)
+
+```yml
+warn message: '&cWhow! Slow down there! %cooldown%'
+invincible time: 1
+Grappling Hooks:
+  '&aGrappling Hook':
+    Multiplier: 3
+    Max Y Power: 1.5
+    Cooldown: 3
+  '&5Super Grappling Hook':
+    Multiplier: 5
+    Max Y Power: 2.25
+    Cooldown: 2
+```
+
+`warn message`: This is the message to be printed if you use the grappling hook before the cooldown is over.
+ - `%cooltime%`, `%cooldown%`: Cooltime Value
+
+`invincible time`: When landing on the land after use a grappling hook, you take fall damage after that time has elapsed. (Unit: seconds)
+
+```yml
+Grappling Hooks:
+  '&aGrappling Hook':
+  # Fishing rods with that name are recognized as grappling hooks.
+  # To add a fishing rod with a different name, enter it in the same way as above in quotation marks.
+  # You can use color codes (e.g. &a, &d, &l).
+  # Putting '##' in front of a name disables the grappling hook for that name.
+
+    Multiplier: 3
+    Max Y Power: 1.5
+    Cooldown: 3
+```
+
+`Multiplier`: This is the power multiplied to the grappling hook. The default value is 3, the higher the number, the stronger it flies.
+
+ - Example) 1 = x1 power, 2 = x2 power
+
+`Max Y Power`: When using the grappling hook, determine the maximum upward force. The default value is 1.5, which is determined by the position of the grappling hook when zero is entered. The higher the number, the higher it flies.
+
+ - Example) 1 = x1 power, 2 = x2 power
+
+`Cooldown`: This is the cooldown time until reuse after using the grappling hook. If 0 is entered, the cooldown is removed.
+
+ - (Unit: seconds)
+
+## Downloads
+Download : [Releases](https://github.com/Mooner510/GrapplingHook-plugin/releases)
+
+## Report bugs and Feedback
+**Discord - 무너#0510**
+
+## My Discord:
 #### Click to this image:
 [![](https://discordapp.com/assets/e4923594e694a21542a489471ecffa50.svg)](https://discord.gg/AbgV8Rz)
