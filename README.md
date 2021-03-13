@@ -99,7 +99,9 @@ Grappling Hooks:
 
 ***
 
-# `English Page` (I used translator)
+# English Page
+
+`(I used translator)`
 
 ## Reload
 This plugin is automatically loaded by editing the config.yml file without having to reload it.
