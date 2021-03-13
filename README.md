@@ -40,7 +40,7 @@ Tested versions: **spigot 1.8.8, 1.16.2**
 
 해당 화면에서 낚시대를 클릭하면, 낚시대를 인벤토리로 지급받을 수 있습니다.
 
-## How to Edit config.yml
+## config.yml 수정 
 
  - Syntax [구문]
 
