@@ -21,6 +21,13 @@ public class Utils {
         return i;
     }
 
+    public static String parseDouble(Double value) {
+        if(Math.floor(value) == value) {
+            return "" + (int) Math.floor(value);
+        }
+        return "" + value;
+    }
+
     public static String chat(String msg) {
         return ChatColor.translateAlternateColorCodes('&', msg);
     }
