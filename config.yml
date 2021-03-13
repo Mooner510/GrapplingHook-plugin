@@ -1,0 +1,8 @@
+warn message: "&cWhow! Slow down there!"
+invincible time: 1
+
+Grappling Hooks:
+
+  "&aGrappling Hook":
+    Multiplier: 3
+    Max Y Power: 1.5
