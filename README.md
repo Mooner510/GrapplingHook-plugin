@@ -1,6 +1,7 @@
 # GrapplingHook-plugin
 
 Supported versions: **spigot 1.8-1.16**
+
 Tested versions: **spigot 1.8.8, 1.16.2**
 
 > **List of supported versions:**
