@@ -3,6 +3,8 @@ package Mooner;
 import com.google.common.base.Charsets;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.FishHook;
@@ -11,6 +13,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerFishEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.Vector;
 
@@ -18,18 +21,50 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-import static Mooner.Utils.chat;
-import static Mooner.Utils.chatParser;
+import static Mooner.Utils.*;
 
 public class GrapplingHook extends JavaPlugin implements Listener {
 
     public static GrapplingHook plugin;
     public static FileConfiguration config;
     public static HashMap<Player, Integer> noFallDamage = new HashMap<>();
+    public static HashMap<Player, Integer> coolDowns = new HashMap<>();
     private static Integer warnDelay;
+    private static Integer Cooldown;
     private static String warnMsg;
+    private static FileInputStream stream;
 
     public void reload() {
+        File f = new File("plugins/GrapplingHook/", "config.yml");
+
+        if(!f.exists()) {
+            InputStream stream = this.getResource("config.yml");
+
+            FileConfiguration config1 = null;
+            try {
+                config1 = YamlConfiguration.loadConfiguration(new InputStreamReader(stream, "euc-kr"));
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+            try {
+                config1.save(new File("plugins/GrapplingHook/", "config.yml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            stream = new FileInputStream(f);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            config = YamlConfiguration.loadConfiguration(new InputStreamReader(stream, "euc-kr"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         config = YamlConfiguration.loadConfiguration(new File("plugins/GrapplingHook/", "config.yml"));
         if(config.isSet("invincible time")) warnDelay = (Integer) (int) Math.round(config.getDouble("invincible time") * 20); else warnDelay = 20;
         if(config.isSet("warn message")) warnMsg = config.getString("warn message"); else warnMsg = "&cWhow! Slow down there!";
@@ -69,7 +104,12 @@ public class GrapplingHook extends JavaPlugin implements Listener {
                                 if(entry.getValue() <= 0) {
                                     noFallDamage.remove(entry.getKey());
                                 }
-                                Bukkit.broadcastMessage(chat("&c"+ entry.getKey().getName() + " &b" + entry.getValue()));
+                            }
+                            for(Map.Entry<Player, Integer> entry: coolDowns.entrySet()) {
+                                coolDowns.replace(entry.getKey(), entry.getValue() - 1);
+                                if(entry.getValue() <= 0) {
+                                    coolDowns.remove(entry.getKey());
+                                }
                             }
                     }, 0, 1));
     }
@@ -92,6 +132,17 @@ public class GrapplingHook extends JavaPlugin implements Listener {
         }
     }
 
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        Player player = (Player) sender;
+        ItemStack i = player.getItemInHand();
+        if (cmd.getName().equalsIgnoreCase("grapplinghook") || cmd.getName().equalsIgnoreCase("gh")) {
+            new HookGUI(player, 0);
+            return true;
+        }
+        return false;
+    }
+
     @EventHandler
     public void onFishing(PlayerFishEvent event) {
         Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
@@ -101,8 +152,8 @@ public class GrapplingHook extends JavaPlugin implements Listener {
                 Player p = event.getPlayer();
                 reload();
                 p.sendMessage(chat("&b" + warnDelay));
-                if(noFallDamage.containsKey(p)) {
-                    p.sendMessage(chat(warnMsg));
+                if(coolDowns.containsKey(p)) {
+                    p.sendMessage(chat(warnMsg.replaceAll("%cooltime%", "" + parseDouble((double) coolDowns.get(p) / 20)).replaceAll("%cooldown%", "" + parseDouble((double)coolDowns.get(p) / 20))));
                     return;
                 }
                 if(config.isSet("Grappling Hooks")) {
@@ -131,7 +182,16 @@ public class GrapplingHook extends JavaPlugin implements Listener {
                         } else if (v.getY() > 1.5) v.setY(1.5);
 
                         p.setVelocity(v);
-                        noFallDamage.put(p, warnDelay);
+                        noFallDamage.put(p, warnDelay + 8);
+
+                        if(config.isSet("Grappling Hooks." + chatParser(p.getItemInHand().getItemMeta().getDisplayName()) + ".Cooldown")) {
+                            if (config.getDouble("Grappling Hooks." + chatParser(p.getItemInHand().getItemMeta().getDisplayName()) + ".Cooldown") >= 0)
+                                Cooldown = (Integer) (int) Math.round(config.getDouble("Grappling Hooks." + chatParser(p.getItemInHand().getItemMeta().getDisplayName()) + ".Cooldown") * 20);
+                        } else {
+                            Cooldown = 40;
+                        }
+
+                        coolDowns.put(p, Cooldown);
                     }
                 }
             }
