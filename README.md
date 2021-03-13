@@ -15,6 +15,8 @@ Tested versions: **spigot 1.8.8, 1.16.2**
 > - spigot (1.15.x) : 1.15, 1.15.1, 1.15.2
 > - spigot (1.16.x) : 1.16.1, **1.16.2**, 1.16.3, 1.16.4, 1.16.5
 
+# Go to English Page: [Click me](https://github.com/Mooner510/GrapplingHook-plugin/blob/branch/README.md#english-page-i-used-translator)
+
 ## 리로드
 이 플러그인은, 리로드 할 필요 없이 `config.yml`파일을 수정하면 자동으로 로드됩니다.
 
