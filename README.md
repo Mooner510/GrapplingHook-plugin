@@ -1,4 +1,4 @@
-# GrapplingHook-plugin [![Build Status](https://travis-ci.org/Mooner510/GrapplingHook-plugin.svg?branch=main)](https://travis-ci.org/Mooner510/GrapplingHook-plugin)
+# GrapplingHook-plugin
 
 Supported versions: **spigot 1.8-1.16**
 Tested versions: **spigot 1.8.8, 1.16.2**
