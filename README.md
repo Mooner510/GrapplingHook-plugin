@@ -19,7 +19,7 @@ This plugin is automatically loaded by editing the config.yml file without havin
  - You can easily get the created grappling hook.
  - Does not take damage when landing after used grappling hook.
  - You can easily customize the grappling hook.
- - You can set the cool time for each grappling hook.
+ - You can set the cooltime for each grappling hook.
  - Compatible with almost all Minecraft versions.
 
 ## Commands
