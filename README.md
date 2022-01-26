@@ -20,7 +20,6 @@ This plugin is automatically loaded by editing the config.yml file without havin
  - Does not take damage when landing after used grappling hook.
  - You can easily customize the grappling hook.
  - You can set the cooltime for each grappling hook.
- - Compatible with almost all Minecraft versions.
 
 ## Commands
 ### `/grapplinghook`, `/gh`
@@ -105,7 +104,6 @@ Download : [Releases](https://github.com/Mooner510/GrapplingHook-plugin/releases
  - 그래플링 훅을 사용하고 착지할 때 데미지를 받지 않습니다.
  - 쉽게 그래플링 훅을 커스터 마이징 할 수 있습니다.
  - 각 그래플링 훅 마다 쿨타임을 설정할 수 있습니다.
- - 거의 모든 마인크래프트 버전에 호환됩니다.
 
 ## 명령어
 ### `/grapplinghook`, `/gh`
