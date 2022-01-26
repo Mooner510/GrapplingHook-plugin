@@ -1,19 +1,11 @@
 # GrapplingHook-plugin
 
+**NOTE: This source code for this plugin is out of date!**
+**주의: 이 플러그인에 개시되어 있는 소스 코드는 구버전 소스 코드입니다!**
+
 Supported versions: **spigot 1.8.8**
 
 Tested versions: **spigot 1.8.8**
-
-> **List of unsupported versions:**
-> - spigot (1.8.x) : 1.8, 1.8.3, 1.8.4, 1.8.5, 1.8.6, 1.8.7
-> - spigot (1.9.x) : 1.9, 1.9.2, 1.9.4
-> - spigot (1.10.x) : 1.10, 1.10.2
-> - spigot (1.11.x) : 1.11, 1.11.1
-> - spigot (1.12.x) : 1.12, 1.12.1, 1.12.2
-> - spigot (1.13.x) : 1.13, 1.13.1, 1.13.2
-> - spigot (1.14.x) : 1.14, 1.14.1, 1.14.2, 1.14.3, 1.14.4
-> - spigot (1.15.x) : 1.15, 1.15.1, 1.15.2
-> - spigot (1.16.x) : 1.16.1, 1.16.2, 1.16.3, 1.16.4, 1.16.5
 
 ## 한국어 페이지는, 아래쪽으로 내려가 주세요.
 
