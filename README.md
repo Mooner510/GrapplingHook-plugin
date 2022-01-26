@@ -29,7 +29,7 @@ This plugin is automatically loaded by editing the config.yml file without havin
 
 This command checks all grappling hooks.
 
-To use this command, you need the `grapplinghook.command` permissions.
+To use this command, you need the `grapplinghook.command` permission. (if you have op, you can use this command without this permission)
 
 If you click the fishing rod on the screen, you can receive the fishing rod as inventory.
 
@@ -113,7 +113,7 @@ Download : [Releases](https://github.com/Mooner510/GrapplingHook-plugin/releases
 
 모든 그래플링 훅을 확인하는 명령어입니다.
 
-이 명령어를 사용하기 위해서는, `grapplinghook.command` 펄미션이 필요합니다.
+이 명령어를 사용하기 위해서는, `grapplinghook.command` 펄미션이 필요합니다. (Op를 가지고 있다면, 펄미션에 상관 없이 사용할 수 있습니다.)
 
 해당 화면에서 낚시대를 클릭하면, 낚시대를 인벤토리로 지급받을 수 있습니다.
 
