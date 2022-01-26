@@ -84,7 +84,7 @@ Grappling Hooks:
 Download : [Releases](https://github.com/Mooner510/GrapplingHook-plugin/releases)
 
 ## Report bugs and Feedback
-**Discord - 무너#0510**
+**Discord - 무너#4123**
 
 ## My Discord:
 #### Click to this image:
@@ -168,7 +168,7 @@ Grappling Hooks:
 다운로드는, [Releases](https://github.com/Mooner510/GrapplingHook-plugin/releases)를 참고하세요.
 
 ## 버그 제보 및 업데이트 요청
-**Discord - 무너#0510**
+**Discord - 무너#4123**
 
 ## 디스코드
 #### Click to this image:
