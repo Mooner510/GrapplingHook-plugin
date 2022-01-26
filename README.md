@@ -115,7 +115,7 @@ Download : [Releases](https://github.com/Mooner510/GrapplingHook-plugin/releases
 
 모든 그래플링 훅을 확인하는 명령어입니다.
 
-이 명령어를 사용하기 위해서는, `grapplinghook.command`, `grapplinghook.command.gh` 펄미션이 필요합니다.
+이 명령어를 사용하기 위해서는, `grapplinghook.command` 펄미션이 필요합니다.
 
 해당 화면에서 낚시대를 클릭하면, 낚시대를 인벤토리로 지급받을 수 있습니다.
 
