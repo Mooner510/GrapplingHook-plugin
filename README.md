@@ -1,7 +1,9 @@
+**NOTE: This source code for this plugin is out of date!**
+
+**주의: 이 플러그인에 개시되어 있는 소스 코드는 구버전 소스 코드입니다!**
+
 # GrapplingHook-plugin
 
-**NOTE: This source code for this plugin is out of date!**
-**주의: 이 플러그인에 개시되어 있는 소스 코드는 구버전 소스 코드입니다!**
 
 Supported versions: **spigot 1.8.8**
 
