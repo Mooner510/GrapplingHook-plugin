@@ -52,7 +52,7 @@ Grappling Hooks:
 ```
 
 `warn message`: This is the message to be printed if you use the grappling hook before the cooldown is over.
- - `%cooltime%`, `%cooldown%`: Cooltime Value
+ - PlaceHolder: `%cooltime%`, `%cooldown%`: Cooltime Value
 
 `invincible time`: When landing on the land after use a grappling hook, you take fall damage after that time has elapsed. (Unit: seconds)
 
@@ -136,7 +136,7 @@ Grappling Hooks:
 ```
 
 `warn message`: 쿨타임이 끝나기 전에 그래플링 훅을 사용할 경우 출력할 메시지입니다.
- - `%cooltime%`, `%cooldown%`: 쿨타임 값 출력
+ - 자리 표시자: `%cooltime%`, `%cooldown%`: 쿨타임 값 출력
 
 `invincible time`: 그래플링 훅을 쓰고 바닥에 착지 후, 해당 시간이 지나고 난 후 부터 낙하 피해를 받습니다. (단위: 초)
 
