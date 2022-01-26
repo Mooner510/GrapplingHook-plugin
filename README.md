@@ -30,7 +30,7 @@ This plugin is automatically loaded by editing the config.yml file without havin
 
 This command checks all grappling hooks.
 
-To use this command, you need the `grapplinghook.command` and `grapplinghook.command.gh` permissions.
+To use this command, you need the `grapplinghook.command` permissions.
 
 If you click the fishing rod on the screen, you can receive the fishing rod as inventory.
 
